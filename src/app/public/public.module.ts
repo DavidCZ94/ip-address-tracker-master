@@ -15,7 +15,7 @@ import { PublicComponent } from './public.component';
   ],
   declarations: [
     PublicComponent,
-    HomeComponent
+    HomeComponent,
   ],
   exports: [],
   providers: []

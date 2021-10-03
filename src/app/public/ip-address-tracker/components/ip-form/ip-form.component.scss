@@ -1,0 +1,36 @@
+.tittle{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.ip-input-container{
+    max-width: 550px;
+    height: 60px;
+    margin: auto;
+    input{
+        border-radius: 1rem;
+    }
+
+    button{
+        border-radius: 1rem;
+        width: 60px;
+        background-color: #000000;
+    }
+}
+
+$breakpoint-sm: 768px;
+
+@media (max-width: $breakpoint-sm) {
+    .container{
+        width: 77%;
+    }
+    .tittle{
+        font-size: 25px;
+    }
+}
+
+/*
+font-weight: 400;
+font-weight: 500;
+font-weight: 700;
+*/
