@@ -60,9 +60,6 @@ export class LocationMapComponent implements OnInit, AfterViewInit {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    console.log('Lat=' + lat);
-    console.log('lng=' + lng);
-
     L.marker([ lat | 4.60971, lng | -74.08175]).addTo(this.map);
 
     tiles.addTo(this.map);
