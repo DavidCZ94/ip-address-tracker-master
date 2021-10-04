@@ -1,10 +1,10 @@
 <div class="container text-center py-4 px-0">
     <h1 class="tittle">IP Address Tracker</h1>
     <div>
-        <form class="py-3">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="py-3">
             <div class="input-group ip-input-container">
-                <input type="text" class="form-control" placeholder="Search for any IP addres domain" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-dark" type="button" id="button-addon2">
+                <input maxlength="15" class="form-control" placeholder="Search for any IP addres domain" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="ip">
+                <button class="btn btn-dark" type="submit" id="button-addon2">
                     <i><img src="./../../../../../assets/images/icon-arrow.svg" alt="" srcset=""></i>
                 </button>
             </div>

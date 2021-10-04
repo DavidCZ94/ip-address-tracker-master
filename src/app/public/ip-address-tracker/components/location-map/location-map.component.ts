@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IpLocationService } from '../../shared/ip-location.service';
 
 @Component({
   selector: 'app-location-map',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationMapComponent implements OnInit {
 
-  constructor() { }
+  actualIp$: Observable<String>;
+  ipIps$: Observable<String>;
+  timezone$: Observable<String>;
+  location$: Observable<String>;
+
+  constructor(private ipLocationService: IpLocationService) {
+    this.actualIp$ = this.ipLocationService.actualIp$;
+    this.ipIps$ = this.ipLocationService.ipIps$;
+    this.timezone$ = this.ipLocationService.timezone$;
+    this.location$ = this.ipLocationService.location$;
+  }
 
   ngOnInit(): void {
   }

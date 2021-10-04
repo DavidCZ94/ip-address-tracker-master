@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  localIpApiUrl: 'https://api.ipify.org/?format=json',
+  ipifyGeolocationApi: 'https://geo.ipify.org/api/v1',
+  ipifyApiKey: 'at_oDelgQX6IcdQC9bUuXKt3FT0PO0zR'
 };
 
 /*
