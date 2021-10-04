@@ -1,4 +1,23 @@
-div{
-    background-color: #ffffff;
-    height: 440px;
+.map-container {
+  }
+  
+  .map-frame {
+    border: none;
+    height: 50%;
+  }
+  
+  #map {
+    position: relative;
+    width: 100%;
+    height: 550px;
+  }
+
+$breakpoint-sm: 768px;
+
+@media (max-width: $breakpoint-sm) {
+  #map {
+    position: relative;
+    width: 100%;
+    height: 570px;
+  }
 }

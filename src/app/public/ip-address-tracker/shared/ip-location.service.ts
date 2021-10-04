@@ -23,6 +23,9 @@ export class IpLocationService {
 
   private location = new BehaviorSubject('');
   location$ = this.location.asObservable();
+
+  private cordinates = new BehaviorSubject<any>([]);
+  cordinates$ = this.cordinates.asObservable();
   
 
   ipifyGeolocationApi = environment.ipifyGeolocationApi;
@@ -34,6 +37,7 @@ export class IpLocationService {
     return this.http.get<LocationData>(`${this.ipifyGeolocationApi}?apiKey=${this.ipifyApiKey}&ipAddress=${ip}`).pipe(
       tap(
         response => {
+          this.cordinates.next([response.location.lat, response.location.lng]);
           this.actualIp.next(response.ip);
           this.ipIps.next(response.isp);
           this.timezone.next(`UTC ${response.location.timezone}`);
