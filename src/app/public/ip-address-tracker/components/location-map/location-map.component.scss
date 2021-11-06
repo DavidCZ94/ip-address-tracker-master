@@ -1,6 +1,4 @@
-.map-container {
-  }
-  
+.map-container { 
   .map-frame {
     border: none;
     height: 50%;
@@ -9,9 +7,10 @@
   #map {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: calc(100vh - 250px);
   }
-
+}
+  
 $breakpoint-sm: 768px;
 
 @media (max-width: $breakpoint-sm) {
